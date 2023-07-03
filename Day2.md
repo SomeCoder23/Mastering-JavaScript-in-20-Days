@@ -2,9 +2,51 @@
 ---
 
   ### The Learned Concepts:
-  
+  - Todays lesson began with discussing expressions and variables. We got to know their definitions and how they are connected, we also learned how JavaScript evaluates expressions step by step. The instructor introduced variables, explaining their declaration and assignment to values in detail, as well as valid names for variables. We also compared between var, let and const.
+    
+  - The next lesson consisted of learning about arrays, how they are arranged and evaluated by JavaScript, and mutability. The instructor also mentioned various methods that can be performed on arrays, such as: pop, push, sort, join, etc... She differentiated between the push() and concat() functions, and between mutable(arrays) and immutable(string) data.
+
+  - We then explored objects, explaining their properties(properties pointing to values or methods), comparing between objects and strings, we were also given some examples of built-in objects (e.g. document, console, math). The instructor visualized what happend when objects are created or accessed. She also introduced us to `this` and nested objects. At the end we implented what we learned on a tic-toe demo on the browser, with DOM.
   ---
  ### Code Examples: 
+
+Expressions & Variables:
+- `const test = "This can't be changed";`
+- `let test2 = "This can be changed";`
+- `let item = document.getElementById("item");`
+- `var answer = 8 * (7 + 9) / (5 - 3);`
+
+Arrays
+```
+let myArray = ["hello", 12, "bye", 0.2, false];
+console.log(myArray);
+console.log(myArray.length);
+console.log(myArray[0]);
+console.log(myArray.indexOf(0.2));
+console.log(myArray.includes("Everything"));
+let lastItem = myArray.pop();
+myArray.push("something");
+console.log(myArray);
+console.log("Last Item: " + lastItem);
+console.log("Sorted Array: " + myArray.sort());
+console.log(myArray.join(" / "));
+console.log(myArray.concat(["newItem", 80]));
+```
+Objects
+```
+const myObject = {
+    name: "Sarah Zughyer",
+    age: 21,
+    address: { city: "Hebron", country: "Palestine"},
+    hobbies: ["sleeping", "watching movies", "reading novels"],
+    greet: function(){ console.log("Hello! My name is " + this.name+ "!") }
+}
+console.log(myObject);
+myObject.greet();
+myObject['hobbies'].push("playing games");
+myObject.favoriteColor = "Teal";
+console.log(myObject);
+```
 
 ---
  ### Coding Excercise Solutions:
