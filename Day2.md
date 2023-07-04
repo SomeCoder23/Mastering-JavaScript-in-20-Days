@@ -49,7 +49,7 @@ console.log(myObject);
 ```
 
 ---
- ### Coding Excercise Solutions:
+ ### Coding Exercise Solutions:
  Here are my solutions for the coding exercises problems assigned for this day:
  -  [1st Exercise](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup)
  ```
