@@ -31,7 +31,7 @@
 - `"Hello, World!".includes("Hello");`
 - `"Hello, World!".startsWith("Hell");`
 ---
- ### Coding Excercise Solutions:
+ ### Coding Exercise Solutions:
  Here are my solutions for the coding exercises problems assigned for this day:
  
  -  [1st Exercise](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-multiplication)
