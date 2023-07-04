@@ -49,7 +49,7 @@ The full project => [Quiz Project](https://github.com/SomeCoder23/Mastering-Java
 ```
 
 ---
- ### Coding Excercise Solutions:
+ ### Coding Exercise Solutions:
  Here are my solutions for the coding exercises problems assigned for this day:
  -  [1st Exercise](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/return-a-value-from-a-function-with-return)
  ```
