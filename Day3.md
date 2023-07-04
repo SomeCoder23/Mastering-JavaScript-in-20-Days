@@ -2,9 +2,51 @@
 ---
 
   ### The Learned Concepts:
-  
+  - The instructor provided an overview of the quiz project we are going to implement over the next courses. We started coding the first TODOs related with the newly learned concepts from previous lectures.
+  - We discussed functions in great detail, going over arguments, parameters (and naming them), return values and functions with no return value. Arrow functions were explained as well, with a few excercises given to sum up all we leaned about functions at the end. Then we added some new functions to our quiz project -the code is provided below.
+  - The instructor thoroughly explained scopes, demonstrating how variables can be accessed in a certain scope as well as the difference between global and local scopes with various examples. She discussed the function and block scopes, and compared between var and let concerning scopes. They behave the same according to function scopes, however, when using var variables in block scopes they behave differently than let variables.
   ---
  ### Code Examples: 
+
+ - The code we added to the [quiz project](https://anjana.dev/javascript-first-steps/2-jsquiz-starter.html):
+ ```
+ // TODO 1: Declare & assign variables pointing to the corresponding element(s)
+    const statement = document.getElementById("statement");
+    const optionButtons = document.getElementById("options").children;
+    const explanation = document.querySelector("#explanation");
+
+    // TODO 2: Declare & assign a variable called fact
+    let fact = {
+        statement: "const variables are mutable",
+        answer: false,
+        explanation: "Variables declared with const can't be changed, they are constant, immutable."
+    }
+   
+    // TODO 3: Set the text of the statement element to the fact's statement
+    statement.textContent = fact.statement;  
+
+    // TODO 4: Declare disable & enable functions to set or remove the "disabled" attribute from a given button element
+    const disable = (button) => button.setAttribute("disabled", "");
+    function enable(button) {
+        button.removeAttribute("disabled");
+    }
+
+
+    // TODO 5: Declare an isCorrect function that compares a guess to the right answer
+    const isCorrect = (guess) => guess == fact.answer.toString();
+```
+The full project => [Quiz Project](https://github.com/SomeCoder23/Mastering-JavaScript-in-20-Days/blob/main/CodeExamples/quizProject.js)
+
+- Scope code examples:
+```
+  let globalVar = "This is a global variable"; 
+  function narrowScope() {
+    console.log(globalVariable);
+    let localVar = "This is a variable from within the function.";
+   }
+   narrowerScope();
+   console.log(localVar); //we will get an error here: localVar not defined
+```
 
 ---
  ### Coding Excercise Solutions:
