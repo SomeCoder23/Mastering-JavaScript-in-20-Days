@@ -1,74 +1,4 @@
-Skip to content
-SomeCoder23
-/
-Mastering-JavaScript-in-20-Days
-
-Type / to search
-Command palette
-Create new...
-Issues
-Pull requests
-You have no unread notifications
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Open a pull request
-Create a new pull request by comparing changes across two branches. If you need to, you can also .
- 
-...
- 
-  Able to merge. These branches can be automatically merged.
-@SomeCoder23
-Update Day4.md
- 
-Add heading textAdd bold text, <Ctrl+b>Add italic text, <Ctrl+i>
-Add a quote, <Ctrl+Shift+.>Add code, <Ctrl+e>Add a link, <Ctrl+k>
-Add a bulleted list, <Ctrl+Shift+8>Add a numbered list, <Ctrl+Shift+7>Add a task list, <Ctrl+Shift+l>
-Directly mention a user or team
-Reference an issue, pull request, or discussion
-Add saved reply
-Slash commands
-Leave a comment
-No file chosen
-Attach files by dragging & dropping, selecting or pasting them.
-Styling with Markdown is supported
-Remember, contributions to this repository should follow our GitHub Community Guidelines.
-Reviewers
-No reviews
-Assignees
-No one—
-Labels
-None yet
-Projects
-None yet
-Milestone
-No milestone
-Development
-Use Closing keywords in the description to automatically close issues
-
-Helpful resources
-GitHub Community Guidelines
- 1 commit
- 1 file changed
- 1 contributor
-Commits on Jul 5, 2023
-Update Day4.md
-
-@SomeCoder23
-SomeCoder23 committed 11 minutes ago
-Copy the full SHA
-View commit details
-Browse the repository at this point in the history
-Showing  with 73 additions and 0 deletions.
-  73 changes: 73 additions & 0 deletions73  
-Day4.md
-@@ -2,10 +2,83 @@
+## Day #4 of Mastering-JavaScript
 ---
 
   ### The Learned Concepts:
@@ -150,18 +80,37 @@ The full project => [Doggo Quiz Game Project](https://github.com/SomeCoder23/Mas
 
 ---
  ### Coding Exercise Solutions:
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Comparing main...SomeCoder23-patch-1 · SomeCoder23/Mastering-JavaScript-in-20-Days
+ Here are my solutions for the coding exercises problems assigned for this day:
+ 
+ -  [1st Exercise](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-multiple-conditional-ternary-operators)
+```
+function checkSign(num) {
+  return (num > 0)? "positive": (num < 0)?"negative": "zero";
+}
+checkSign(10);
+```
+ -  [2nd Exercise](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/golf-code)
+```
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+function golfScore(par, strokes) {
+  // Only change code below this line
+  if(strokes == 1) return names[0];
+  if(strokes <= par - 2) return names[1];
+  if(strokes == par - 1) return names[2];
+  if(strokes == par) return names[3];
+  //using the ternary operator:
+  return (strokes == par + 1)? names[4]:(strokes == par + 2)? names[5]: names[6];
+  return "Change Me";
+  // Only change code above this line
+}
+golfScore(5, 4);
+```
+ -  [3rd Exercise](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array)
+
+[Link to 3rd exercise code.](https://github.com/SomeCoder23/Mastering-JavaScript-in-20-Days/blob/main/CodeExamples/D4_E3.js)
+
+ -  [4th Exercise](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-filter-method-to-extract-data-from-an-array)
+
+[Link to 4th exercise code.](https://github.com/SomeCoder23/Mastering-JavaScript-in-20-Days/blob/main/CodeExamples/D4_E4.js)
+
+---
