@@ -81,5 +81,5 @@ The full project => [Doggo Quiz Game Project](https://github.com/SomeCoder23/Mas
  ### Coding Exercise Solutions:
  Here is my solution for the assignment of the day:
 
- [Go to Rick and Morty Characters List Page]()
+ [Go to Rick and Morty Characters List Page](https://github.com/SomeCoder23/Mastering-JavaScript-in-20-Days/tree/main/CodeExamples/Rick%26MortyAssignment)
  
