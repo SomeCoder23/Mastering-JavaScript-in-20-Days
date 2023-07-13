@@ -16,6 +16,20 @@
   ---
  ### Code Examples: 
 
+  - Higher Order Functions & Callbacks:
+    ```
+    function forEach(array, callback) {
+      array.forEach(item => callback(item));
+    }
+
+    function reduce(array, callback, initialValue) {
+      array.forEach(item => initialValue += callback(item))
+        return initialValue;
+     }
+  
+    console.log(reduce([1, 4, 2, 3], num => num * 2, 1));
+    ```
+
 
 ---
  ### Coding Exercise Solutions:
@@ -43,7 +57,38 @@ function urlSlug(title) {
 ```
 
  -  [3rd Exercise](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week2-day1-tasks/tasks.md)
-```
+     - Question 1: Functions and Callbacks:
+      ```
+      const mapAsync = (arr, callback) => {
+    return new Promise((resolve, reject) => {
+        const newArr = arr.map(item => callback(item));
+        resolve(newArr);
 
-```
+        if(newArr.length <= 0) 
+            reject("Error: Failed to map array or passed in array empty."); 
+        });
+      }
+      
+      const someArray = [3, 12, 10, 2.5];
+      console.log("Original Array:"); 
+      console.log(someArray);
+      const squareNum = (num) => num * num;
+      mapAsync(someArray, squareNum)
+          .then(answer => {
+              let result = answer;
+              console.log("New Array: ");
+              console.log(result);
+          })
+          .catch(error => console.log(error));
+      ```
+     - Question 2: Call Stack and Recursion
+    ```
+    const sumRange = (start, end) => {
+      if(end - start === 1) return end + start;
+  
+      else return end + sumRange(start, --end);
+    }
+    
+    console.log(sumRange(1, 5)); //should be 15
+    ```
 —
