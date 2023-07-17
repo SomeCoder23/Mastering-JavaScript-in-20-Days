@@ -9,11 +9,6 @@
     - The third solution is using the `new` keyword, which automates all the hard work. He thoroughly explained how it works behind the scenes, from automatically creating a new empty object, storing it into the this parameter, setting `__proto__` to point to the function which is being run, and then finally automatically returning `this`. We then discussed the benefits and problems of this solution.
     - The last solution was to use classes, via the `class` keyword. It works the same as `new` behind the scenes, however it makes code more readable and helps to write less code.
  
-  ---
- ### Code Examples: 
-
-I'm sleepy 
-
 ---
  ### Coding Exercise Solutions:
- Here are my solutions for the coding exercises problems assigned for this day:
+The solutions' link was posted on a sheet for today.
