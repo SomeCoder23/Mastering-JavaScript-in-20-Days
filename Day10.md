@@ -42,4 +42,65 @@ if(!Object.is || true){
 ---
  ### Coding Exercise Solutions:
  Here are my solutions for the coding exercises problems assigned for this day:
+
+- Question #1:
+```
+function convertStringToNumber(input) {
+  
+  if(typeof input != "string")
+      return {value: input, type: typeof input};
+  else return +input;
+
+}
+const test = convertStringToNumber("3");
+console.log(test);
+console.log(convertStringToNumber(test));
+```
+- Question #2:
+```
+const checkNaN = (value) => {
+ return value != value;
+}
+```
+- Question #3:
+```
+function isEmptyValue(value) {
+  const type = typeof value;
+  if(type === "string")
+    return value.length == 0;
+  else if(type === "undefined")
+    return true;
+  else return value === null; 
+}
+```
+- Question #4:
+```
+function compareObjects(input1, input2) {
+  if(typeof input1 != "object" || typeof input2 != "object")
+    return [input1, input2];
+  else if(Object.keys(input1).length != Object.keys(input2).length) 
+    return false;
+  else{
+      for (let key in input1) {
+        if (!(input2.hasOwnProperty(key) && input2[key] === input1[key]))
+            return false;
+      }
+      return true;
+  }
+}
+```
+- Question #5:
+```
+const complexCoercion = (input) => {
+  let type = typeof input;
+  if(type === "undefined" || input === null)
+   return false;
+  else if(type === "number"){
+    input = String(input);
+    type = "string";
+  }
+  if(type === "string")
+    return Boolean(input);
+}
+```
  
