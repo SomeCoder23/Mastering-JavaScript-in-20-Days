@@ -82,3 +82,51 @@ function remindUnpaid(recordIds) {
 ---
  ### Coding Exercise Solutions:
  Here are my solutions for the coding exercises problems assigned for this day:
+
+- Question #1:
+```
+
+const exampleNormalFunc1 = (a, b, c) => {
+	return a * (b + c);
+  }
+  
+  const exampleNormalFunc2 = (x, y) => {
+	return x * y;
+  }
+  
+  const exampleNormalFunc3 = (string) => {
+	return string + " " + string + " " + string + "!";
+  }
+  
+  
+  const arrowHOF = (normalFunc) => {
+	// write your code here;
+	function execute(...args){
+		return (count) => {
+			if(count === undefined) count = 1;
+			let output = [];
+			for(let i = 0; i < count; i++){
+				output.push(normalFunc(...args));
+			}
+			return output;
+		};
+	}
+
+	return execute;
+  }
+  
+  const hofNormalFunc1 = arrowHOF(exampleNormalFunc1);
+  const hofNormalFunc2 = arrowHOF(exampleNormalFunc2);
+  const hofNormalFunc3 = arrowHOF(exampleNormalFunc3);
+  
+  console.log(hofNormalFunc1(3, 4, 5)(2)); // logs 27 twice
+  console.log(hofNormalFunc2(20, 35)(4)); // logs 700 four times
+  console.log(hofNormalFunc3("Meow")()); // logs "Meow Meow Meow!" once
+  
+```
+- Question #2:
+```
+```
+- Question #3:
+   - Example 1: Since the inner function doesn't have a variable named x within its own scope, it steps outside to the wider scope which in this case is the function outer1's scope to search for x and there it finds it, accesses it's value and prints it.
+   - Example 2: In this example the inner function has its own instance of x within its own scope so there is no need to search the outer scope, it accesses the x's value from within it's scope and prints it.
