@@ -15,6 +15,54 @@
 - Static Typing:
   - Question #1:
 ```
+const sayHelloWorld = new Promise<string>((resolve, reject) => {
+  resolve("Hello world!");
+});
+
+const checkBoolean = (boolean : boolean) => new Promise<boolean>((resolve, reject) => {
+  if (boolean) {
+    resolve(boolean);
+  } else {
+    reject(`Input is false :(`)
+  }
+})
+
+interface resultObj {
+  x: string;
+  y: number;
+}
+
+const returnObj = new Promise<resultObj>((resolve, reject) => {
+  resolve({
+    x: "meow",
+    y: 45,
+  })
+})
+
+
+type promArray = (Promise<string> | Promise<boolean> | Promise<resultObj>)[];
+const promisesArray : promArray  = [sayHelloWorld, checkBoolean(true), returnObj];
+
+
+const convertToObj = (array : promArray): any => {
+   let obj: any = {};
+
+   for(let i = 0; i < array.length; i++)
+      obj['p' + (i + 1)] = array[i];
+    
+    return obj;
+  
+  /*Promise.all(array)
+    .then(results => {
+      for(let i = 1; i <= results.length; i++)
+          obj[`p${i}`] = results[i];
+      return obj;
+    })
+    .catch(err => console.log(err));*/
+
+}
+
+console.log(convertToObj(promisesArray));
 ```
 
 - Scope and hoisting questions:
