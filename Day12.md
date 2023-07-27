@@ -126,6 +126,10 @@ const exampleNormalFunc1 = (a, b, c) => {
 ```
 - Question #2:
 ```
+const preserveThis = (func) => {
+  return func.bind(obj);
+};
+
 ```
 - Question #3:
    - Example 1: Since the inner function doesn't have a variable named x within its own scope, it steps outside to the wider scope which in this case is the function outer1's scope to search for x and there it finds it, accesses it's value and prints it.
